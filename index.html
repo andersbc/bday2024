@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
 <head>
     <!-- https://drive.google.com/file/d/17IMwDCUx_Vz_E_NKuc0InTwPfwow2R0b/view?usp=sharing -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Greeting</title>
+    <title>Tillykke</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,24 +22,33 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f8ff;
         }
+
+        button {
+            font-family: "Oleo Script", cursive;
+        }
+
         .card {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            max-width: 100%;
+            margin: 20px;
         }
+
         .card img {
             max-width: 100%;
             border-radius: 10px;
         }
+
         .card button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 30px;
             color: #fff;
             background-color: #ff69b4;
             border: none;
@@ -37,18 +56,37 @@
             cursor: pointer;
             margin-top: 20px;
         }
+
         .card button:hover {
             background-color: #ff1493;
         }
+
+        .gifts {
+            background-color: #fff0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;            
+            font-family: "Oleo Script", cursive;            
+        }
     </style>
 </head>
+
 <body>
     <div class="card">
-        <h1>Tillykke med de 80 år!</h1>        
+        <h1>Tillykke med de 80 år!</h1>
         <img src="./bday.jpg" alt="fødselsdagsbillede">
-        <p>Klik nedenfor for at høre en lille sang!</p>
-        <button onclick="playSong()">Afspil sang</button>
+        <button onclick="playSong()">Fødselsdagssang - klik her</button>
         <audio id="birthdaySong" src="bdaysong.m4a"></audio>
+        <div class="gifts">
+            <p style="font-weight: 600;">Gaver - når du kommer hjem:</p>
+            <p>weekendavisen</p>
+            <p>planter</p>
+            <p>arbejdsdag i haven med hele familien</p>
+        </div>
+
     </div>
 
     <script>
@@ -58,4 +96,5 @@
         }
     </script>
 </body>
+
 </html>
