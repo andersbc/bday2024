@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .card button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .card button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Tillykke med de 80 år!</h1>        
+        <img src="https://drive.google.com/thumbnail?id=14D7bHP8JFA8DQAuvN2Bw1-cYDZHgbItn&sz=w1000" alt="fødselsdagsbillede">
+        <p>Klik nedenfor for at høre en lille sang!</p>
+        <button onclick="playSong()">Afspil sang</button>
+        <audio id="birthdaySong" src="https://www.example.com/path/to/your_birthday_song.mp3"></audio>
+    </div>
+
+    <script>
+        function playSong() {
+            var song = document.getElementById("birthdaySong");
+            song.play();
+        }
+    </script>
+</body>
+</html>
